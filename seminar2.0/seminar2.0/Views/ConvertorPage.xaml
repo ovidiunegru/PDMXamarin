@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="seminar2.ConvertorPage"
+             Title="Convertor">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="64"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Converste!"/>
+            <Entry Grid.Row="1" Grid.Column="0" Placeholder="Valoare de convertit" x:Name="entryValoare"  Text="{Binding ValoareDeConvertit}"/>
+            <Picker Grid.Row="1" Grid.Column="1" x:Name="pickerSursa" Title="Selectati valuta" ItemsSource ="{Binding ListaValute}"  SelectedIndex="{Binding ValutaSursa}"/>
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="in"/>
+            <Entry Grid.Row="3" Grid.Column="0" IsReadOnly="True" x:Name="entryRezultat" Text="{Binding Rezultat}"/>
+            <Picker Grid.Row="3" Grid.Column="1" x:Name="pickerDestinatie" ItemsSource ="{Binding ListaValute}" SelectedItem="{Binding ValutaDestinatie}"/>
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"  Text="Converteste" Command="{Binding ConvertesteCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

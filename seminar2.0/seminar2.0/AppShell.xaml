@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:seminar2"
+                x:Class="seminar2.AppShell">
+
+    <FlyoutItem Title="Acasa">
+        <local:MainPage/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Convertor">
+        <ShellContent ContentTemplate="{DataTemplate local:ConvertorPage}"/>
+
+    </FlyoutItem>
+
+    <FlyoutItem Title="Istoric">
+        <local:IstoricPage/>
+
+    </FlyoutItem>
+
+    <FlyoutItem Title="Setari">
+        <local:SetariPage/>
+
+    </FlyoutItem>
+
+    <FlyoutItem Title="Despre">
+        <local:DesprePage/>
+
+    </FlyoutItem>
+</Shell>

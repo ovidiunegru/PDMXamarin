@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="seminar2.IstoricPage" Title="Istoric Curs">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Evolutia cursului" HorizontalOptions="FillAndExpand"/>
+                <Picker x:Name="pcikerValute" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <chart:ChartView x:Name="chartViewCurs" VerticalOptions="FillAndExpand"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
